@@ -1,0 +1,11 @@
+.friends__dialog {
+	grid-area: message;
+
+	color: antiquewhite;
+	font-size: 18px;
+	padding-top: 20px;
+}
+
+.friends__dialog p {
+	color: #333;
+}

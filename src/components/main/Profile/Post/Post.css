@@ -1,0 +1,35 @@
+.post {
+	background-color: #2f5b9d;
+	border-radius: 20px;
+	padding: 15px;
+	box-shadow: 0 0 5px #2f5b9d;
+
+	margin: 0px 0px 20px 0px;
+
+	position: relative;
+}
+
+.post__ava {
+	width: 80px;
+	height: 80px;
+}
+
+.post__ava img {
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #ff763a;
+}
+
+.post__like {
+	color: #ff763a;
+	font-size: 20px;
+
+	position: absolute;
+	top: 60px;
+	left: 110px;
+}
+
+.post__text {
+	color: #e6ecf5;
+	font-size: 18px;
+}

@@ -1,0 +1,14 @@
+.header {
+	background-color: #00b7ff;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+
+	grid-area: header;
+}
+
+.header__logo img{
+	width: 70px;
+	height: 70px;
+}
