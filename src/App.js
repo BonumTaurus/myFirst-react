@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 const App = (props) => {
 
 	const state = props.state;
+	const messagesPage = state.messagesPage;
 
 	return (
 		<BrowserRouter>
