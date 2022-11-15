@@ -8,15 +8,16 @@ const App = (props) => {
 
 	const state = props.state;
 	const messagesPage = state.messagesPage;
+	const profilePage = state.profilePage;
 
 	return (
 		<BrowserRouter>
 			<div className='wrapper'>
 				<Header />
-				<Sidebar friends={state.messagesPage.friends} />
-				<Main friends={state.messagesPage.friends}
-					users={state.profilePage.users}
-					dialogs={state.messagesPage.dialogs} />
+				<Sidebar friends={messagesPage.friends} />
+				<Main friends={messagesPage.friends}
+					users={profilePage.users}
+					dialogs={messagesPage.dialogs} />
 			</div>
 		</BrowserRouter>
 	)
