@@ -1,22 +1,24 @@
-import Friends from './Friends/Friends';
+import AuthorsContainer from './Authors/AuthorsContainer';
+import ProfileContainer from './Profile/ProfileContainer';
 import './Main.css';
 import { Route, Routes } from 'react-router-dom';
-import Profile from './Profile/Profile';
+
 
 const Main = (props) => {
 
-	let usersElements = props.friends.map(user => <Route path={`messages/${user.id}`} element={<Friends friends={props.friends} dialogs={props.dialogs} />}></Route>)
+	let authorsElements = props.dialogsPage.authors.map(user => <Route path={`messages/${user.id}`}
+		element={<AuthorsContainer />}></Route>)
 
 	return (
 		<main className='main'>
 			<Routes>
-				<Route path='/messages' element={<Friends friends={props.friends} dialogs={props.dialogs} />}></Route>
+				<Route path='/messages' element={<AuthorsContainer />}></Route>
 			</Routes>
 			<Routes>
-				{usersElements}
+				{authorsElements}
 			</Routes>
 			<Routes>
-				<Route path='/profile' element={<Profile users={props.users} />}></Route>
+				<Route path='/profile' element={<ProfileContainer />}></Route>
 			</Routes>
 		</main>
 

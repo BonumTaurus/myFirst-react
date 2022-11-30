@@ -10,7 +10,7 @@ const Post = (props) => {
 				<div className='post__like'>{`like ${props.like}`}</div>
 				<div className='post__name'>{props.name}</div>
 				<p className='post__text'>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					{props.message}
 				</p>
 			</div>
 		</div>

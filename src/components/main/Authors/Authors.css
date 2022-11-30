@@ -1,0 +1,71 @@
+.main__Authors {
+	grid-area: friends;
+	padding: 20px;
+}
+
+.Authors {
+	background-color: #fab819;
+	border-radius: 20px;
+
+	display: flex;
+}
+
+.Authors__list {
+	list-style: none;
+	grid-area: list;
+}
+
+.Authors__list li {
+	font-size: 18px;
+	color: #333;
+	cursor: pointer;
+}
+
+.Authors__list li a {
+	text-decoration: none;
+	color: antiquewhite;
+}
+
+.Authors__list li a.active {
+	color: #333;
+}
+
+.Authors__list li img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.Authors__send-box {
+	margin-top: 30px;
+	margin-left: 150px;
+}
+
+.Authors__textarea {
+	display: block;
+	border-radius: 20px;
+	width: 270px;
+	height: 50px;
+	background-color: #38bff1;
+	padding: 20px;
+	border: none;
+	color: #2f5b9d;
+	font-size: 20px;
+}
+
+.Authors__textarea:focus {
+	outline: none;
+	box-shadow: 0 0 5px #f74881;
+}
+
+.Authors__button {
+	width: 100px;
+	height: 35px;
+
+	font-size: 17px;
+	border-radius: 20px;
+	color: #2f5b9d;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 0 5px #2f5b9d;
+}

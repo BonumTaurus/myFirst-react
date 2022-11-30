@@ -1,0 +1,6 @@
+.li-box {
+	display: flex;
+}
+.li-box__item {
+	margin: 0px 0px 40px 0px;
+}

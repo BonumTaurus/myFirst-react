@@ -1,9 +1,21 @@
-import Post from './Post/Post';
+import React from 'react';
 import './Profile.css';
+import Post from './Post/Post';
 
 const Profile = (props) => {
 
-	let postsUsers = props.users.map(friend => <Post like={friend.like} name={friend.name} ava={friend.ava} />)
+	let postsUsers = props.profilePage.users.map(user => <Post message={user.message} like={user.like} name={user.name} ava={user.ava} />)
+
+	let textareaElement = React.createRef();
+
+	let viewPost = () => {
+		props.viewPost();
+	}
+
+	let onPostChange = () => {
+		let text = textareaElement.current.value;
+		props.onPostChange(text);
+	}
 
 	return (
 		<div className='main__profile profile'>
@@ -18,8 +30,8 @@ const Profile = (props) => {
 				</div>
 			</div>
 			<div className='profile__myPost'>
-				<textarea className='profile__textarea'>my post</textarea>
-				<button className='profile__addPost'>add post</button>
+				<textarea className='profile__textarea' onChange={onPostChange} ref={textareaElement} value={props.newPostText}></textarea>
+				<button className='profile__addPost' onClick={viewPost}>add post</button>
 			</div>
 			{postsUsers}
 		</div>
